@@ -2,18 +2,28 @@ pico-8 cartridge // http://www.pico-8.com
 version 32
 __lua__
 poo=1
-pee=1
+poospeed=1
+pee=40
 col=0
 butt="♥"
 awesome=true
+
 
 function _init()
 end
 
 function _update()
- poo=poo+1
- pee=pee+1
+ poo=poo+poospeed
  col=col+1
+ 
+ if poo>127 then
+  poospeed=-1 
+ end
+ 
+ if poo<0 then
+  poospeed=1
+ end
+ 
 end
 
 function _draw()
