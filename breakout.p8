@@ -1,30 +1,25 @@
 pico-8 cartridge // http://www.pico-8.com
 version 32
 __lua__
+poo=1
+pee=1
+col=0
+butt="♥"
+awesome=true
 
 function _init()
- --put things that you wanna
- --do in the beginning
- --of the program
- print("init")
 end
 
 function _update()
- --first update
- --executes always
- --30 / 60 times per second
- --put game state changes
- print("update")
+ poo=poo+1
+ pee=pee+1
+ col=col+1
 end
 
 function _draw()
- --then draw
- --sometimes skipped
- --here put things that costs time
- print("draw")
+ cls()
+ print(butt,poo,pee,col)
 end
-
-cls()
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
