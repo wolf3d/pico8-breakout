@@ -3,7 +3,10 @@ version 32
 __lua__
 poo=1
 poospeed=1
+
 pee=40
+peespeed=1
+
 col=0
 butt="♥"
 awesome=true
@@ -14,14 +17,25 @@ end
 
 function _update()
  poo=poo+poospeed
+ pee=pee+peespeed
  col=col+1
  
- if poo>127 then
+ --this is where we check
+ --if the heart hits the edges
+ if poo>122 then
   poospeed=-1 
  end
  
  if poo<0 then
   poospeed=1
+ end
+
+ if pee>122 then
+  peespeed=-1 
+ end
+ 
+ if pee<0 then
+  peespeed=1
  end
  
 end
